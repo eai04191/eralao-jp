@@ -12,7 +12,6 @@ ERALAO-JP はラストオリジンの二次創作ゲームである[ERALAO](http
     -   ERALAO は全体が韓国語であるにも関わらず html の lang 属性が en になっているため、Chrome のページ翻訳などが翻訳元の言語を見失い、翻訳が正しく行われない問題があります
     -   この修正によってページ翻訳はページが韓国語であることを認識できるので、より精度の高い翻訳が行われます
 -   日本語翻訳時に日本語フォントを使用させる
-    -   Chrome のみで機能します
     -   日本語翻訳使用時には、韓国語より日本語フォントを優先して使用するようにします
 -   いくつかのボタンの日本語化
     -   タイトル・デートメニューなどの選択肢を日本語にしてあります
@@ -21,16 +20,17 @@ ERALAO-JP はラストオリジンの二次創作ゲームである[ERALAO](http
 
 ## 使い方
 
-1. お使いのブラウザに UserScript マネージャーを導入する
-    - [Violentmonkey (for Google Chrome)](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
-    - [Violentmonkey (for Edge)](https://microsoftedge.microsoft.com/addons/detail/eeagobfjdenkkddmbclomhiblgggliao/)
+現在のところ PC 版 Google Chrome でのみ機能します
+
+1. Chrome に UserScript マネージャーを導入する
+    - [Violentmonkey](https://chrome.google.com/webstore/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag)
     - など
-    - 翻訳自体はブラウザの翻訳機能に依存するので Chrome が良いと思います
 2. [eralao-jp.user.js](https://github.com/eai04191/eralao-jp/raw/dist/eralao-jp.user.js) を開き、指示に従いインストールする
     - ![image](https://user-images.githubusercontent.com/3516343/194890225-62f7969a-7841-403e-981f-3be5ee2a8f9c.png)  
       Violentmonkey ならこのような画面が開くので、インストールボタンを押す
     - このような画面が開かない場合は UserScript マネージャーが導入できていません
-3. ゲームのページを開くと反映されているはずです
+3. [ERALAO](http://eralao.com/)を開くと翻訳メニューが出るので日本語を選択する
+    - ![image](https://user-images.githubusercontent.com/3516343/194898399-fd416559-6a5a-475a-bf57-bd03687c8588.png)
 
 ## ライセンス
 
