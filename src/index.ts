@@ -1,7 +1,7 @@
 import "./styles.css";
 
 (function () {
-    document.documentElement.setAttribute("lang", "choise");
+    document.documentElement.setAttribute("lang", "ko");
 
     const titleButtonTranslations = [
         { string: "Start", ja: "はじめから" },
@@ -12,8 +12,32 @@ import "./styles.css";
     ];
     titleButtonTranslations.forEach(({ string, ja }) => {
         const css =
-            `main-menu button[string="${string}"] { font-size: 0; }` +
+            `main-menu button[string="${string}"] font { font-size: 0; }` +
             `main-menu button[string="${string}"] > span > font::before { content: "${ja}"; font-size: var(--button-font-size); }`;
+        GM_addStyle(css);
+    });
+
+    const stockNumberTranslations = [
+        { number: "1", ja: "+1" },
+        { number: "5", ja: "+5" },
+        { number: "allBuy", ja: "全て購入" },
+        { number: "allSell", ja: "全て売却" },
+    ];
+    stockNumberTranslations.forEach(({ number, ja }) => {
+        const css =
+            `stock-number button[data-number="${number}"] > font { font-size: 0; }` +
+            `stock-number button[data-number="${number}"] > font::before { content: "${ja}"; font-size: 1rem; }`;
+        GM_addStyle(css);
+    });
+
+    const stockButtonTranslations = [
+        { className: "buy", ja: "購入" },
+        { className: "sell", ja: "売却" },
+    ];
+    stockButtonTranslations.forEach(({ className, ja }) => {
+        const css =
+            `stock-buttons button.${className} > font { font-size: 0; }` +
+            `stock-buttons button.${className} > font::before { content: "${ja}"; font-size: var(--button-font-size); }`;
         GM_addStyle(css);
     });
 
