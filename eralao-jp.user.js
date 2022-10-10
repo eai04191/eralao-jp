@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name        ERALAO-JP
 // @namespace   net.mizle
-// @version     1.0.0
+// @version     1.0.1
 // @author      Irie Aoi <eai@mizle.net>
 // @description ERALAO JP
 // @homepageURL https://github.com/eai04191/eralao-jp
