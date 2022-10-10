@@ -46,7 +46,7 @@
   styleInject(css_248z);
 
   (function () {
-      document.documentElement.setAttribute("lang", "choise");
+      document.documentElement.setAttribute("lang", "kr");
       var titleButtonTranslations = [
           { string: "Start", ja: "はじめから" },
           { string: "Load", ja: "つづきから" },
@@ -56,8 +56,30 @@
       ];
       titleButtonTranslations.forEach(function (_a) {
           var string = _a.string, ja = _a.ja;
-          var css = "main-menu button[string=\"".concat(string, "\"] { font-size: 0; }") +
+          var css = "main-menu button[string=\"".concat(string, "\"] font { font-size: 0; }") +
               "main-menu button[string=\"".concat(string, "\"] > span > font::before { content: \"").concat(ja, "\"; font-size: var(--button-font-size); }");
+          GM_addStyle(css);
+      });
+      var stockNumberTranslations = [
+          { number: "1", ja: "+1" },
+          { number: "5", ja: "+5" },
+          { number: "allBuy", ja: "全て購入" },
+          { number: "allSell", ja: "全て売却" },
+      ];
+      stockNumberTranslations.forEach(function (_a) {
+          var number = _a.number, ja = _a.ja;
+          var css = "stock-number button[data-number=\"".concat(number, "\"] > font { font-size: 0; }") +
+              "stock-number button[data-number=\"".concat(number, "\"] > font::before { content: \"").concat(ja, "\"; font-size: 1rem; }");
+          GM_addStyle(css);
+      });
+      var stockButtonTranslations = [
+          { className: "buy", ja: "購入" },
+          { className: "sell", ja: "売却" },
+      ];
+      stockButtonTranslations.forEach(function (_a) {
+          var className = _a.className, ja = _a.ja;
+          var css = "stock-buttons button.".concat(className, " > font { font-size: 0; }") +
+              "stock-buttons button.".concat(className, " > font::before { content: \"").concat(ja, "\"; font-size: var(--button-font-size); }");
           GM_addStyle(css);
       });
       var buttonTranslations = [
