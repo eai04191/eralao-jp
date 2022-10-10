@@ -2,7 +2,7 @@
 // ==UserScript==
 // @name        ERALAO-JP
 // @namespace   net.mizle
-// @version     1.0.1
+// @version     1.1.0
 // @author      Irie Aoi <eai@mizle.net>
 // @description ERALAO JP
 // @homepageURL https://github.com/eai04191/eralao-jp
@@ -46,7 +46,7 @@
   styleInject(css_248z);
 
   (function () {
-      document.documentElement.setAttribute("lang", "kr");
+      document.documentElement.setAttribute("lang", "ko");
       var titleButtonTranslations = [
           { string: "Start", ja: "はじめから" },
           { string: "Load", ja: "つづきから" },
