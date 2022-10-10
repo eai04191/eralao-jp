@@ -1,0 +1,19 @@
+html[lang="ja"] {
+    --font-family-ja: "MochiyPopOne", system-ui;
+    --button-font-size: 24px;
+}
+
+html[lang="ja"] body,
+html[lang="ja"] pre {
+    font-family: var(--font-family-ja);
+    letter-spacing: -0.02em;
+}
+
+pre {
+    white-space: normal;
+    flex-direction: column;
+}
+
+#stock-selector {
+    font-size: 1rem;
+}
